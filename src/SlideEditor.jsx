@@ -70,7 +70,10 @@ export default function SlideEditor({ account, slides, replaceSlides, uploadedVi
           <h2>Slide bearbeiten</h2>
           <label>Name der Slide<input value={slide.label} maxLength={36} onChange={(event) => update('label', event.target.value)} /></label>
           <label>Überschrift<input value={slide.title} maxLength={52} onChange={(event) => update('title', event.target.value)} /></label>
-          <label>Text<textarea value={slide.text} maxLength={160} rows={3} onChange={(event) => update('text', event.target.value)} /></label>
+          <div className="editor-field">
+            <label htmlFor="slide-text">Text</label>
+            <textarea id="slide-text" value={slide.text} maxLength={160} rows={3} onChange={(event) => update('text', event.target.value)} />
+          </div>
           <fieldset>
             <legend>Design</legend>
             <div className="swatches">
