@@ -1,19 +1,12 @@
-# JobSwipe
+﻿# JobSwipe
 
-JobSwipe ist ein lokaler Prototyp für die Jobsuche per Swipe. Bewerber:innen zeigen, wie sie arbeiten, in drei oder vier selbst gestalteten Slides. Recruiter:innen sichten diese Slides. Bewerber:innen bewerten auf dieselbe Weise die offenen Stellen. Bei gegenseitigem Interesse entsteht ein Match.
+Öffentliche, für Smartphones gestaltete Hochformat-Webapp mit drei fiktiven Bewerber:innen und zwei Recruiter-Testaccounts. Selbst gestaltete Slides zeigen, wie Bewerber:innen arbeiten. Gegenseitiges Interesse erzeugt ein Match.
 
-## Lokal starten
+## Webapp öffnen
 
-Voraussetzung ist Node.js 24 LTS mit npm.
+**[JobSwipe öffnen](https://dmstomyris.github.io/jobswipe/)**
 
-```sh
-git clone https://github.com/DmsTomyris/jobswipe.git
-cd jobswipe
-npm ci
-npm run dev
-```
-
-Öffne [http://localhost:5173](http://localhost:5173). Der Produktionsbuild lässt sich mit `npm run build` prüfen und mit `npm run preview` lokal ansehen.
+Die Webapp wird nach Änderungen am Branch `main` automatisch auf GitHub Pages veröffentlicht.
 
 ## Demo ausprobieren
 
@@ -23,18 +16,35 @@ npm run dev
 | Studio Nord | Sucht Werkstudierende für Data & Research. |
 | Mila Weber | Zeigt eine Statistik-Arbeitsprobe und eine Tutoriumsidee. |
 | Jonas Kaya | Zeigt ein Datenprojekt und ein achtsekündiges Introvideo. |
-| Lea Fischer | Stellt einen Prototyp aus der digitalen Lehre vor. |
+| Lea Fischer | Stellt einen Prototyp für digitale Lehre vor. |
 
-1. Im Startaccount **Prof. Dr. Hahn** Milas Slides ansehen und **Interesse** wählen.
-2. Zu **Mila Weber** wechseln und auf der Stelle **Tutor:in für Statistik** ebenfalls **Interesse** wählen. Das Match erscheint unter **Matches** in beiden Accounts.
-3. Als Bewerber:in **Meine Slides** öffnen. Texte, Stichworte und Design ändern oder eine vierte Slide hinzufügen. Auf der ersten Slide lässt sich optional ein MP4- oder WebM-Video bis 25 MB einbinden.
+1. Im Account **Prof. Dr. Hahn** Mila ansehen und **Interesse** wählen.
+2. Zu **Mila Weber** wechseln und bei der Stelle **Tutor:in für Statistik** ebenfalls **Interesse** wählen. Das Match erscheint unter **Matches** in beiden Accounts.
+3. Als Bewerber:in unter **Meine Slides** Texte, Stichworte und Design ändern oder eine vierte Slide ergänzen. Auf der ersten Slide ist optional ein eigenes MP4- oder WebM-Video bis 25 MB möglich.
 
-Die Pfeile an der Slide wechseln die Folie. Zum Bewerten auf der Slide nach links oder rechts wischen, die Pfeiltasten verwenden oder **Weiter** beziehungsweise **Interesse** wählen. Sind alle Profile bewertet, lassen sich die Bewertungen des aktiven Testaccounts zurücksetzen.
+Auf Smartphones wechselst du mit einem Wisch nach links oder rechts zwischen Profilen und Slides. Am Computer funktionieren die Pfeiltasten sowie die Schaltflächen **Weiter** und **Interesse**. Sind alle Profile bewertet, lassen sich die Bewertungen für den Testaccount zurücksetzen.
 
-Alle Personen, Stellen und Organisationen der Demo sind fiktiv. Testaccounts sind ohne Anmeldung auswählbar. Bewertungen und Slide-Texte werden lokal im Browser gespeichert, hochgeladene Videos liegen in IndexedDB. Andere Browser und Geräte starten mit einer eigenen Demo.
+Personen, Stellen und Organisationen sind frei erfundene Demodaten. Bewertungen und geänderte Slide-Texte werden im jeweiligen Browser gespeichert. Hochgeladene Videos bleiben lokal in IndexedDB und werden nicht veröffentlicht.
 
-## Zusammenarbeiten
+## App lokal starten
 
-Das [private GitHub-Repository](https://github.com/DmsTomyris/jobswipe) kann über die [Zugriffsverwaltung](https://github.com/DmsTomyris/jobswipe/settings/access) für weitere GitHub-Konten freigegeben werden. Eingeladene Mitglieder können nach Annahme der Einladung klonen.
+Voraussetzung ist Node.js 24 oder neuer mit npm.
 
-Für Änderungen einen Branch von `main` erstellen, `npm run build` ausführen und einen Pull Request zu `main` öffnen. Die GitHub-Aktion prüft den Build bei Pull Requests und Pushes auf `main`. Beispiele und Stellen stehen in `src/data.js`, der Prototypzustand in `src/storage.js`. In Testprofilen und Commits nur fiktive Daten verwenden.
+```sh
+git clone https://github.com/DmsTomyris/jobswipe.git
+cd jobswipe
+npm ci
+npm run dev
+```
+
+Öffne `http://localhost:5173`. Die Entwicklungsserver-Adresse aus dem Terminal lässt sich auch auf einem Smartphone im selben WLAN öffnen.
+
+Mit `npm run build` wird der Produktionsbuild erzeugt. Mit `npm run preview` kannst du ihn lokal ansehen.
+
+## Mitarbeit am öffentlichen Repository
+
+Das [GitHub-Repository](https://github.com/DmsTomyris/jobswipe) ist öffentlich. Jede Person kann den Code ansehen und klonen. GitHub-Schreibrechte sind nicht erforderlich, um einen Fork anzulegen und Änderungen vorzuschlagen.
+
+Für Änderungen zuerst **Fork** wählen und anschließend einen Branch erstellen. Nach der lokalen Prüfung mit `npm run build` einen Pull Request zum Branch `main` dieses Repositories öffnen. GitHub Actions prüft den Build automatisch. Eine Änderung wird nach dem Review und dem Zusammenführen über Pages veröffentlicht.
+
+Beispiele und Demo-Stellen stehen in `src/data.js`. Der Demo-Zustand wird in `src/storage.js` verwaltet. Committe bitte keine echten Personen- oder Zugangsdaten.
