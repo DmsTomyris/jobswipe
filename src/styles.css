@@ -453,17 +453,17 @@ h1, h2, p { margin: 0; }
   .progress { margin: 0 0 3px; padding: 0 4px; gap: 5px; }
   .progress button { min-height: 20px; }
   .progress button::before { inset: 7px 0; }
-  .slide, .editor-preview .slide { --slide-min: 218px; --slide-ratio: 1.67; border-radius: 12px; }
-  .slide.has-video { --slide-min: 236px; }
-  .slide-copy { padding: 15px 31px; }
-  .slide-copy > * { max-width: 85%; }
-  .slide-eyebrow { margin-bottom: 6px; }
-  .slide-copy h2 { font-size: clamp(30px, 9cqi, 52px); }
-  .slide-copy h2.long-title { font-size: clamp(24px, 7cqi, 36px); }
-  .slide-text { margin-top: 4px; font-size: clamp(14px, 3.8cqi, 21px); }
-  .slide-tags { gap: 4px; margin-top: 10px; }
-  .slide-tags li { padding: 4px 7px; border-radius: 7px; }
-  .orbit { right: 3%; opacity: .32; }
+  .slide, .editor-preview .slide { --slide-min: 235px; --slide-ratio: 0.82; border-radius: 15px; }
+  .slide.has-video { --slide-min: 290px; }
+  .slide-copy { padding: 24px 32px; }
+  .slide-copy > * { max-width: 100%; }
+  .slide-eyebrow { margin-bottom: 13px; }
+  .slide-copy h2 { font-size: clamp(35px, 11cqi, 55px); }
+  .slide-copy h2.long-title { font-size: clamp(27px, 8cqi, 38px); }
+  .slide-text { margin-top: 9px; font-size: clamp(16px, 4.8cqi, 23px); }
+  .slide-tags { gap: 7px; margin-top: 14px; }
+  .slide-tags li { padding: 6px 9px; border-radius: 8px; }
+  .orbit { width: 61%; right: -7%; opacity: .18; }
   .slide-arrow { width: 25px; height: 28px; border-radius: 9px; }
   .slide-arrow svg { width: 17px; }
   .previous { left: 3px; }
