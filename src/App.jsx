@@ -20,7 +20,7 @@ function Sidebar({ account, page, chooseAccount, choosePage, matchCount }) {
   return (
     <aside className="sidebar">
       <button className="brand" type="button" onClick={() => choosePage('discover')} aria-label="JobSwipe – Entdecken">
-        <img src="/favicon.svg" alt="" width="48" height="48" />
+        <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width="48" height="48" />
         <span>jobswipe<span className="brand-dot">.</span></span>
       </button>
       <label className="mobile-account">

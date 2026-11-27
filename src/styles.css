@@ -195,13 +195,14 @@ h1, h2, p { margin: 0; }
 .swipeable { cursor: grab; touch-action: pan-y; user-select: none; }
 .swipeable:active { cursor: grabbing; }
 .slide {
-  --slide-ratio: 2.08;
-  --slide-min: 320px;
+  --slide-ratio: 0.72;
+  --slide-min: 0px;
   container-type: inline-size;
   position: relative;
   display: grid;
   align-items: center;
-  width: 100%;
+  width: min(100%, 520px);
+  margin-inline: auto;
   min-height: var(--slide-min);
   overflow: hidden;
   border-radius: 23px;
